@@ -1,73 +1,71 @@
-# PyCertificate - Gerador Automático de Certificados
+# pyCertificate
 
-PyCertificate é uma ferramenta poderosa e automatizada para a geração de certificados personalizados. Com integração direta a planilhas, o projeto permite criar certificados rapidamente, sobrepondo os dados individuais de cada aluno em um template predefinido.
+## Descrição
 
-🚀 **Este projeto foi desenvolvido como parte de um tutorial do canal Dev Aprender | Jhonatan de Souza.**
+`pyCertificate` é uma aplicação Python que automatiza a geração de certificados a partir de uma planilha do Excel. Com uma interface gráfica simples, o usuário pode selecionar o arquivo de planilha, a aba desejada e a pasta de destino para salvar os certificados gerados.
 
-## 🚀 Funcionalidades
 
-- 🔥 **Geração rápida e automática** de certificados a partir de planilhas.
-- 📊 **Suporte a arquivos Excel** (XLSX) via `openpyxl`.
-- 🖼 **Customização dinâmica** dos certificados utilizando `Pillow`.
-- 📜 Suporte a **dados detalhados**, incluindo:
-  - Nome do participante
-  - Curso realizado
-  - Tipo de participação
-  - Carga horária
-  - Data de início e término
-  - Data de emissão
-- 💾 **Exportação automática** em formato PNG e PDF.
-- ⚡ **Fácil integração** com outros sistemas.
+## Funcionalidades
 
-## 📥 Instalação
+- 📂 Selecionar um arquivo Excel (`.xlsx`) contendo os dados dos participantes.
+- 📑 Escolher a aba da planilha que contém os dados.
+- 📁 Definir uma pasta de destino para salvar os certificados gerados.
+- 🖼️ Gerar certificados automaticamente a partir de um modelo de imagem.
 
-Certifique-se de ter o Python 3 instalado. Em seguida, clone o repositório e instale as dependências:
 
-```sh
-# Clone o repositório
-git clone https://github.com/seu-usuario/PyCertificate.git
-cd PyCertificate
+## Requisitos
 
-# Instale as dependências
-pip install -r requirements.txt
+Para executar o `pyCertificate`, certifique-se de ter os seguintes pacotes instalados:
+
+```bash
+pip install openpyxl pillow tkinter
 ```
 
-## 🛠 Como Usar
+## Como Usar
 
-1. Prepare uma planilha Excel (`dados.xlsx`) com as colunas:
-   ```
-   Nome | Curso | Participação | Carga Horária | Data Início | Data Término | Data Emissão
-   ```
-2. Execute o script principal:
-   ```sh
-   python pycertificate.py
-   ```
-3. Os certificados gerados serão salvos automaticamente na pasta `output/`.
+1. Execute o script Python:
 
-## 🎨 Customização do Certificado
+```bash
+python pyCertificate.py
+```
+2. Na interface:
 
-O layout do certificado pode ser personalizado editando o arquivo de template na pasta `templates/`. Você pode alterar a posição dos textos e fontes dentro do código.
+```
+   - Clique em **"Buscar"** para selecionar a planilha Excel.
+   - Escolha a aba desejada no menu suspenso.
+   - Selecione a pasta onde os certificados serão salvos.
+   - Clique em **"Gerar Certificados"** para iniciar o processo.
+```
 
-## 📌 Exemplo de Saída
+## Estrutura do Arquivo Excel
 
-Aqui está um exemplo de certificado gerado pelo PyCertificate:
+A planilha deve conter os seguintes campos:
 
-<img src="https://github.com/user-attachments/assets/af333db2-35c2-4b83-808b-3c897c3abd3d" alt="Exemplo de Certificado" width="500"/>
+```
+| Coluna | Descrição |
+|--------|------------|
+| A      | Nome do Curso |
+| B      | Nome do Participante |
+| C      | Tipo de Participação |
+| D      | Data de Início |
+| E      | Data de Término |
+| F      | Carga Horária |
+| G      | Data de Emissão |
+```
 
-## &#x20;Contribuição
+## Personalização
 
-Contribuições são bem-vindas! Siga os passos:
+- A imagem do certificado padrão deve ser salva como **`certificado_padrao.jpg`** no diretório do projeto.
+- As fontes utilizadas devem estar no mesmo diretório (`tahoma.ttf` e `tahomabd.ttf`).
 
-1. Faça um fork do repositório.
-2. Crie uma branch (`feature-nova-funcionalidade`).
-3. Commit suas mudanças.
-4. Abra um Pull Request.
 
-## 📝 Licença
+## Contribuição
 
-Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Fique à vontade para abrir **issues** e enviar **pull requests** com melhorias para o projeto! 😊
 
----
 
-🔥 PyCertificate – Transformando dados em certificados de forma inteligente e eficiente!
+## Licença
+```
+Este projeto está sob a licença **MIT**. Veja o arquivo `LICENSE` para mais detalhes.
+```
 
